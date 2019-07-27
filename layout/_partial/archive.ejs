@@ -1,0 +1,47 @@
+<% if (page.current === 1 && is_home() && theme.notice) { %>
+  <article class="mdui-card mdui-m-b-5">
+    <div class="mdui-card-content mdui-typo mdui-ripple">
+      <i class="mdui-icon material-icons mdui-text-color-deep-orange">notifications</i> <%- theme.notice %>
+    </div>
+  </article>
+<% } %>
+<% page.posts.each(function (post) { %>
+  <article class="mdui-card mdui-m-b-5 mdui-hoverable">
+    <a href="<%- url_for(post.link || post.path) %>"<% if (post.link) { %> target="_blank"<% } %>>
+      <header class="mdui-card-media mdui-ripple">
+        <img src="<%- post.thumbnail || '/images/random/material-' + (Math.round(Math.random() * 18) + 1) + '.png' %>" style="max-height: 240px;">
+        <div class="mdui-card-media-covered">
+          <div class="mdui-card-primary">
+            <div class="mdui-card-primary-title"><%= post.title %></div>
+            <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> <%- date(post.date) %> / <i class="iconfont">&#xe601;</i> <%= post.author || config.author %></div>
+          </div>
+        </div>
+      </header>
+    </a>
+    <div class="mdui-card-content mdui-typo">
+      <% if (post.excerpt) { %>
+        <%- strip_html(post.excerpt) %>
+      <% } else { %>
+        <%- strip_html(truncate(post.content, {length: 80})) %>
+      <% } %>
+      <a href="<%- url_for(post.link || post.path) %>"<% if (post.link) { %> target="_blank"<% } %>><%= __('more') %> >></a>
+    </div>
+    <footer class="mdui-card-actions">
+      <% if (post.categories && post.categories.length) { %>
+        <%- list_categories(post.categories, {show_count: false, style: 'none', separator: '', class: 'mdui-ripple article_categories'}) %>
+      <% } %>
+      <% if (post.tags && post.tags.length) { %>
+        <%- list_tags(post.tags, {show_count: false, style: 'none', separator: '', class: 'mdui-ripple article_tags'}) %>
+      <% } %>
+    </footer>
+  </article>
+<% }); %>
+<% if (page.total > 1) { %>
+  <nav id="paginator">
+    <%- paginator({
+      prev_text: __('<button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>'),
+      next_text: __('<button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>'),
+      space: ''
+    }) %>
+  </nav>
+<% } %>

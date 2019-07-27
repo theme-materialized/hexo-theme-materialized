@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="<%= config.language %>">
+<%- partial('_partial/head') %>
+<body class="mdui-appbar-with-toolbar mdui-drawer-body-left mdui-theme-primary-<%= theme.theme_color.primary || 'indigo' %> mdui-theme-accent-<%= theme.theme_color.accent || 'pink' %>">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+  <%- partial('_partial/sidebar', null, {cache: !config.relative_link}) %>
+  <main id="main" class="mdui-m-t-5 fadeIn animated"><%- body %></main>
+  <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-theme-accent"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  <% if (theme.busuanzi.site || theme.busuanzi.page) { %><script async src="<%- theme.busuanzi.busuanzi_js %>"></script><% } %>
+  <%- js(['js/mdui', 'js/script']) %>
+</body>
+</html>

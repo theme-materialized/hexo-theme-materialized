@@ -1,0 +1,25 @@
+home: 主页
+archive: 归档
+category: 分类
+tag: 标签
+about: 关于
+links: 友情链接
+rss_feed: RSS
+search: 搜索
+no_archive: 归档为空
+no_category: 分类为空
+no_tag: 标签为空
+no_links: 链接为空
+more: 阅读更多
+prev: 上一篇
+next: 下一篇
+permalink: 本文链接：
+share:
+  weibo: 分享到微博
+  twitter: 分享到Twitter
+  facebook: 分享到Facebook
+  google_plus: 分享到Google+
+  linkedin: 分享到LinkedIn
+  qq: 分享到QQ
+  telegram: 分享到Telegram
+donate: 打赏
