@@ -86,7 +86,7 @@ qrcode: # Qrcode for articles. if use `plugin`, `hexo-helper-qrcode` plugin is n
   use: plugin
 donate: # Use your payment qrcode or link to receive donations. Set with `name` and `link`
 search: # Search settings. if use `plugin`, `hexo-generator-search` plugin is needed and `path` should be set correctly
-  placeholder: 请输入关键字
+  placeholder: Enter key words
   path: /search.xml
   use: plugin
 comment: # Comment plugin settings. Set `use` with the plugin name such as `gitalk`
