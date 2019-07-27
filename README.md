@@ -1,8 +1,6 @@
 # Theme: Materialized
 
-An elegant Materialized theme for [Hexo](https://hexo.io/), based on [MDUI](https://www.mdui.org/).
-
-Original theme by [niemingzhao](https://github.com/niemingzhao).
+A cool materialized theme for [Hexo](https://hexo.io/).
 
 ## Installation
 
