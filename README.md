@@ -2,6 +2,20 @@
 
 A cool materialized theme for [Hexo](https://hexo.io/).
 
+View the demo site [here](https://theme-materialized.github.io).
+
+## Screenshots
+
+![frontpage](https://i.loli.net/2019/08/12/8fKedcbWDkpCqEI.png)
+
+![post](https://i.loli.net/2019/08/12/2faKWNcsXMC8OAh.png)
+
+![comments](https://i.loli.net/2019/08/12/UcJH3BsXK4Ax7aV.png)
+
+![search](https://i.loli.net/2019/08/12/r4pZfcNshxQaw6k.png)
+
+![darkmode](https://i.loli.net/2019/08/12/MKvX3Iq8T7SrH6Z.png)
+
 ## Installation
 
 ### Install
