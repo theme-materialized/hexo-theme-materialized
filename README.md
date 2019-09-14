@@ -21,7 +21,7 @@ View the demo site [here](https://theme-materialized.github.io).
 ### Install
 
 ``` bash
-$ git clone https://github.com/code004Accepted/hexo-theme-materialized themes/materialized
+$ git clone https://github.com/theme-materialized/hexo-theme-materialized themes/materialized
 ```
 
 ### Enable
