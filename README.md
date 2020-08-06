@@ -30,7 +30,7 @@ Modify `theme` setting in `_config.yml` of the site to `materialized`.
 
 ## Configuration
 
-### _config.yml
+### `_config.yml` file under `/themes/materialized/`
 
 ``` yml
 theme_color: # Theme color. Please go to [Colors](https://www.mdui.org/docs/color)
@@ -138,3 +138,25 @@ donate: false  # Disable article donate link.
 toc: true  # Enable article toc.
 comments: true  # Enable article comment.
 ```
+
+## Sample Article
+
+```markdown
+---
+title: Sample Article
+categories: [Test]
+tags:
+  - Tag1
+  - Tag2
+author: Test
+comments: false
+---
+
+Write something here...
+```
+
+If `thumbnail` in Article/Page Front-matter is not set, a random image will be used.
+
+If `author` in Article/Page Front-matter is not set, `author` in site `_config.yml` will be used.
+
+Also, `toc`, `comments`, `qrcode`, `share_menu` and `donate` is enabled by default if you chose to enable them in the theme `_config.yml`.
